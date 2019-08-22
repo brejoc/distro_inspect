@@ -1,0 +1,54 @@
+version: '3'
+
+services:
+  leap:
+    build: openSUSE_Leap/.
+    volumes:
+      - ./script:/script
+    command: >
+      sh -c "python3 script/dist_outs.py"
+  tumbleweed:
+    build: openSUSE_Tumbleweed/.
+    volumes:
+      - ./script:/script
+    command: >
+      sh -c "python3 script/dist_outs.py"
+  debian:
+    build: debian/.
+    volumes:
+      - ./script:/script
+    command: >
+      sh -c "python3 script/dist_outs.py"
+  ubuntu:
+    build: ubuntu/.
+    volumes:
+      - ./script:/script
+    command: >
+      sh -c "python3 script/dist_outs.py"
+  fedora:
+    build: fedora/.
+    volumes:
+      - ./script:/script
+    command: >
+      sh -c "python3 script/dist_outs.py"
+  centos7:
+    build: centos7/.
+    volumes:
+      - ./script:/script
+    command: >
+      sh -c "python script/dist_outs.py"
+  rhel7:
+    build: rhel7/.
+    volumes:
+      - ./script:/script
+    command: >
+      sh -c "python script/dist_outs.py"
+  rhel8:
+    build: rhel8/.
+    volumes:
+      - ./script:/script
+    command: >
+      sh -c "python3 script/dist_outs.py"
+
+volumes:
+  script:
