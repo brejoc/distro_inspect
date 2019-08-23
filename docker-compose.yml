@@ -49,6 +49,12 @@ services:
       - ./script:/script
     command: >
       sh -c "python3 script/dist_outs.py"
+  mageia7:
+    build: mageia7/.
+    volumes:
+      - ./script:/script
+    command: >
+      sh -c "python3 script/dist_outs.py"
 
 volumes:
   script:
