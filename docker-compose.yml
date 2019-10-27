@@ -37,6 +37,12 @@ services:
       - ./script:/script
     command: >
       sh -c "python script/dist_outs.py"
+  centos8:
+    build: centos8/.
+    volumes:
+      - ./script:/script
+    command: >
+      sh -c "python3 script/dist_outs.py"
   rhel7:
     build: rhel7/.
     volumes:
