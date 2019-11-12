@@ -20,6 +20,7 @@ distro_inspect_leap_1 exited with code 0
 This is all about the `distro` module from Python and what it might return for various distributions. You can choose from the following list:
 
 * centos7
+* centos8
 * debian
 * fedora
 * leap
